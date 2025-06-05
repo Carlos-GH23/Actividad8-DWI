@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background-color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+th {
+    background-color: #ffe066;
+    color: #333;
+}
+
+.pokemon-table img {
+    width: 80px;
+    height: 80px;
+}
