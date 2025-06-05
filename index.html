@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la pagina de Pokemon</title>
+    <link rel="stylesheet" href="index_style.css">
+
+</head>
+<body>
+     
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="services.html">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <img src="https://th.bing.com/th/id/R.6f017d047bb32f762617b6f1c013bdc7?rik=LlL%2bxF6WAKL%2blA&riu=http%3a%2f%2finternovam.com%2fblog%2fwp-content%2fuploads%2f2016%2f07%2fScreenshot_3.jpg&ehk=o9nkwYNEy33h4eEpnA9fdcSHKbkdxswUAPaCDS%2bVP4o%3d&risl=&pid=ImgRaw&r=0" alt="Pokemon Image" class="pokemon-image">
+    <h1 class="titulo">Bienvenido a la pagina de Pokemon</h1>
+    <p class="descripcion">Esta es una pagina dedicada a los Pokemon, donde podras encontrar informacion sobre tus Pokemon favoritos, asi como tambien algunas de sus caracteristicas.</p>
+    <div class="botones-container">
+    <button class="botonFuego" id="botonFuego">Ver Pokemon Fuego</button>
+    <button class="botonAgua" id="botonAgua">Ver Pokemon Fuego</button>
+    </div>
+
+      <div id="resultado" style="margin-top: 20px; font-size: 18px;"></div>
+
+    
+    <script>
+        const pokemonesFuego = ['Charmander','Charmeleon','Charizard','Vulpix','Ninetales','Growlithe','Arcanine','Ponyta','Rapidash','Magmar'];
+        const pokemonesAgua = ['Squirtle','Wartortle','Blastoise','Psyduck','Golduck','Poliwag','Poliwhirl','Poliwrath','Tentacool','Tentacruel'];
+
+        const btnFuego = document.querySelector('#botonFuego');
+        const btnAgua = document.querySelector('#botonAgua');
+        const resultado = document.querySelector('#resultado');
+
+        btnFuego.addEventListener('click', () => {
+resultado.innerHTML = `
+  <div class="card">
+    <h2>Pokémon tipo Fuego:</h2>
+    <ul>
+      ${pokemonesFuego.map(p => `<li>${p}</li>`).join('')}
+    </ul>
+  </div>
+`;        });
+
+        btnAgua.addEventListener('click', () => {
+resultado.innerHTML = `
+  <div class="card">
+    <h2>Pokémon tipo Agua:</h2>
+    <ul>
+      ${pokemonesAgua.map(p => `<li>${p}</li>`).join('')}
+    </ul>
+  </div>
+`;        });
+    </script>
+</body>
+</html>
