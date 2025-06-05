@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background-color: black;
+  }
+
+  .container-center {
+    height: auto; /* Evita que use 100vh */
+    padding-top: 1rem;
+  }
